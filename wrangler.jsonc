@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mut-bff",
+  "main": "vinext/server/fetch-handler",
+  "compatibility_date": "2026-08-04",
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [
+    {
+      "binding": "MUT_KV",
+      "id": "e160bf045df64ccaac89a61f47a27bca"
+    }
+  ],
+  "vars": {
+    "PORTAL_BASE_URL": "https://portal.mut.ac.ke"
+  },
+  "assets": {
+    "directory": "dist/client",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "binding": "ASSETS",
+    "run_worker_first": ["/*", "!/_next/static/*", "!/*/_next/static/*"]
+  }
+}
